@@ -9,8 +9,8 @@ double functionDerivative(double x) {
 double approximation(double x1, double limit) {
     double x2 = x1-function(x1)/functionDerivative(x1);
     while (fabs(x2-x1) > limit) {
-        x2 = x1;
-        x1 = (x2-function(x2)/functionDerivative(x2));
+        x1 = x2;
+        x2 = (x1-function(x1)/functionDerivative(x1));
     }
     return x1;
 }
